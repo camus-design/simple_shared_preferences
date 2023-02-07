@@ -126,4 +126,9 @@ class SimpleSharedPreferences {
   Future<bool> remove(String key) async {
     return await _sp!.remove(key);
   }
+
+  /// Returns true if persistent storage the contains the given [key].
+  bool containsKey(String key) {
+    return _sp!.containsKey(key);
+  }
 }
