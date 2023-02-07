@@ -91,5 +91,5 @@ final Map<String, dynamic>? map = simplePreference.getValue('map');
 
 ```dart
 // Remove data for the 'counter' key.
-final success = await prefs.remove('counter');
+final success = await simplePreference.remove('counter');
 ```

@@ -121,4 +121,9 @@ class SimpleSharedPreferences {
   Future<void> reload() async {
     await _sp!.reload();
   }
+
+  /// Removes an entry from persistent storage.
+  Future<bool> remove(String key) async {
+    return await _sp!.remove(key);
+  }
 }
