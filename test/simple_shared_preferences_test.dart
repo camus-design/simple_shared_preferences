@@ -77,6 +77,22 @@ void main() {
       expect(sharedPreferences.getStringList('List'), testListWriting);
       expect(sharedPreferences.getString('Map'), jsonEncode(testMapWriting));
     });
+
+    test('common writing and reading', () async {
+      await preferences.set('CommonString', testStringWriting);
+      await preferences.set('CommonBool', testBoolWriting);
+      await preferences.set('CommonInt', testIntWriting);
+      await preferences.set('CommonDouble', testDoubleWriting);
+      await preferences.set('CommonList', testListWriting);
+      await preferences.set('CommonMap', testMapWriting);
+
+      expect(preferences.get('CommonString'), testStringWriting);
+      expect(preferences.get('CommonBool'), testBoolWriting);
+      expect(preferences.get('CommonInt'), testIntWriting);
+      expect(preferences.get('CommonDouble'), testDoubleWriting);
+      expect(preferences.get('CommonList'), testListWriting);
+      expect(preferences.get('CommonMap'), testMapWriting);
+    });
   });
 }
 
