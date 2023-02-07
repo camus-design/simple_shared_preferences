@@ -12,7 +12,8 @@ class SimpleSharedPreferences {
   factory SimpleSharedPreferences() {
     if (_singleton == null) {
       throw Exception(
-          'SimpleSharedPreferences is not initialized, call getInstance() first');
+        'SimpleSharedPreferences is not initialized, call getInstance() first',
+      );
     }
 
     return _singleton!;

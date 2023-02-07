@@ -23,8 +23,10 @@ class MyApp extends StatelessWidget {
 }
 
 class SimpleSharedPreferencesDemo extends StatefulWidget {
-  const SimpleSharedPreferencesDemo({Key? key, required this.title})
-      : super(key: key);
+  const SimpleSharedPreferencesDemo({
+    required this.title,
+    Key? key,
+  }) : super(key: key);
 
   final String title;
 
