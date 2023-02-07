@@ -21,7 +21,7 @@ Here are small examples that show you how to use the API.
 ```dart
 import 'package:simple_shared_preferences/simple_shared_preferences.dart';
 
-final simplePreference = await SimpleSharedPreferences().getInstance();
+final simplePreference = await SimpleSharedPreferences.getInstance();
 
 await simplePreference.set('name': 'simple shared preferences');
 await simplePreference.set('age': 1);
