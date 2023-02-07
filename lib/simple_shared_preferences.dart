@@ -58,24 +58,27 @@ class SimpleSharedPreferences {
   T getValue<T>(String key) {
     if (T == String) {
       return _sp!.getString(key) as T;
-    } else if (T == int) {
+    }
+    if (T == int) {
       return _sp!.getInt(key) as T;
-    } else if (T == double) {
+    }
+    if (T == double) {
       return _sp!.getDouble(key) as T;
-    } else if (T == bool) {
+    }
+    if (T == bool) {
       return _sp!.getBool(key) as T;
-    } else if (T == List<String>) {
+    }
+    if (T == List<String>) {
       return _sp!.getStringList(key) as T;
-    } else if (T == Map<String, dynamic>) {
+    }
+    if (T == Map<String, dynamic>) {
       final String? jsonString = _sp!.getString(key);
       if (jsonString == null) {
         return <String, dynamic>{} as T;
-      } else {
-        return jsonDecode(jsonString) as T;
       }
-    } else {
-      throw Exception('Unsupported type');
+      return jsonDecode(jsonString) as T;
     }
+    throw Exception('Unsupported type');
   }
 
   /// Removes an entry from persistent storage.
