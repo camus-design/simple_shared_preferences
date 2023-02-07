@@ -86,7 +86,7 @@ class SimpleSharedPreferences {
     if (T == Map<String, dynamic>) {
       final String? jsonString = _sp!.getString(key);
       if (jsonString == null) {
-        return <String, dynamic>{} as T;
+        return null;
       }
       return jsonDecode(jsonString) as T;
     }

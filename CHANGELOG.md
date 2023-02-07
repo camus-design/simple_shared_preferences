@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Doc: Update README.md
+  
 ## 1.0.0
 
 * Initial release

@@ -46,33 +46,45 @@ final Map<String, dynamic> map = simplePreference.get('map');
 
 ```dart
 // Obtain shared preferences.
-final prefs = await SharedPreferences.getInstance();
+final simplePreference = await SimpleSharedPreferences.getInstance();
 
 // Save an integer value to 'counter' key.
-await prefs.setInt('counter', 10);
+await simplePreference.setValue<int>('counter', 10);
 // Save an boolean value to 'repeat' key.
-await prefs.setBool('repeat', true);
+await simplePreference.setValue<bool>('repeat', true);
 // Save an double value to 'decimal' key.
-await prefs.setDouble('decimal', 1.5);
+await simplePreference.setValue<double>('decimal', 1.5);
 // Save an String value to 'action' key.
-await prefs.setString('action', 'Start');
+await simplePreference.setValue<String>('action', 'Start');
 // Save an list of strings to 'items' key.
-await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']);
+await simplePreference.setValue<List<String>>('items', <String>['Earth', 'Moon', 'Sun']);
+
+// Save an map - simple preference
+await simplePreference.setValue<Map<String, dynamic>>('map', <String, dynamic>{
+  'name': 'simple shared preferences',
+  'age': 1,
+  'isDeveloper': true,
+  'height': 1.75,
+  'list': [1, 2, 3],
+});
 ```
 
 #### Read data
 
 ```dart
 // Try reading data from the 'counter' key. If it doesn't exist, returns null.
-final int? counter = prefs.getInt('counter');
+final int? counter = simplePreference.getValue('counter');
 // Try reading data from the 'repeat' key. If it doesn't exist, returns null.
-final bool? repeat = prefs.getBool('repeat');
+final bool? repeat = simplePreference.getValue('repeat');
 // Try reading data from the 'decimal' key. If it doesn't exist, returns null.
-final double? decimal = prefs.getDouble('decimal');
+final double? decimal = simplePreference.getValue('decimal');
 // Try reading data from the 'action' key. If it doesn't exist, returns null.
-final String? action = prefs.getString('action');
+final String? action = simplePreference.getValue('action');
 // Try reading data from the 'items' key. If it doesn't exist, returns null.
-final List<String>? items = prefs.getStringList('items');
+final List<String>? items = simplePreference.getValue'items');
+
+// Try reading data from the 'map' key. If it doesn't exist, returns null
+final Map<String, dynamic>? map = simplePreference.getValue('map');
 ```
 
 #### Remove an entry
