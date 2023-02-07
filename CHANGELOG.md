@@ -1,7 +1,6 @@
 ## 1.1.1
 
 * Doc: Update README.md
-*
 
 ## 1.1.0
 
