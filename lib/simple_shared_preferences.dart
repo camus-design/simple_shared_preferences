@@ -66,7 +66,7 @@ class SimpleSharedPreferences {
   }
 
   /// Reads a value from persistent storage
-  T getValue<T>(String key) {
+  T? getValue<T>(String key) {
     if (T == String) {
       return _sp!.getString(key) as T;
     }
@@ -98,7 +98,7 @@ class SimpleSharedPreferences {
   dynamic get(String key) {
     final String? jsonString = _sp!.getString(key);
     if (jsonString == null) {
-      return <String, dynamic>{};
+      return null;
     }
     return jsonDecode(jsonString);
   }
