@@ -1,0 +1,21 @@
+name: Publish to Pub.dev
+
+on:
+  push:
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+# [Dart and Flutter Package Publisher](https://github.com/marketplace/actions/dart-and-flutter-package-publisher)
+jobs:
+  publishing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main # required!
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 12
+      - uses: k-paxian/dart-package-publisher@master
+        with:
+          accessToken: ${{ secrets.PUB_ACCESS_TOKEN }}
+          refreshToken: ${{ secrets.PUB_REFRESH_TOKEN }}
+          skipTests: true
