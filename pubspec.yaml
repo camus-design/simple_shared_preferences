@@ -1,6 +1,6 @@
 name: simple_shared_preferences
 description: A simple wrapper for [SharedPreferences] that supports string, int, double, bool, List<String>, and Map<String, dynamic> types.
-version: 1.2.0
+version: 1.2.1
 homepage: https://github.com/camus-design/simple_shared_preferences
 
 environment:

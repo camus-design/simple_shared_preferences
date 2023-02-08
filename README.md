@@ -73,18 +73,18 @@ await simplePreference.setValue<Map<String, dynamic>>('map', <String, dynamic>{
 
 ```dart
 // Try reading data from the 'counter' key. If it doesn't exist, returns null.
-final int? counter = simplePreference.getValue('counter');
+final int? counter = simplePreference.getValue<int>('counter');
 // Try reading data from the 'repeat' key. If it doesn't exist, returns null.
-final bool? repeat = simplePreference.getValue('repeat');
+final bool? repeat = simplePreference.getValue<bool>('repeat');
 // Try reading data from the 'decimal' key. If it doesn't exist, returns null.
-final double? decimal = simplePreference.getValue('decimal');
+final double? decimal = simplePreference.getValue<double>('decimal');
 // Try reading data from the 'action' key. If it doesn't exist, returns null.
-final String? action = simplePreference.getValue('action');
+final String? action = simplePreference.getValue<String>('action');
 // Try reading data from the 'items' key. If it doesn't exist, returns null.
-final List<String>? items = simplePreference.getValue'items');
+final List<String>? items = simplePreference.getValue<List<String>>('items');
 
 // Try reading data from the 'map' key. If it doesn't exist, returns null
-final Map<String, dynamic>? map = simplePreference.getValue('map');
+final Map<String, dynamic>? map = simplePreference.getValue<Map<String, dynamic>>('map');
 ```
 
 #### Remove an entry

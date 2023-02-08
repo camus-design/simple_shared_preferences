@@ -1,3 +1,7 @@
+## 1.2.1
+
+* Doc: Update README.md
+
 ## 1.2.0
 
 * Features: add containsKey
