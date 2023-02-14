@@ -69,20 +69,46 @@ class SimpleSharedPreferences {
   /// Reads a value from persistent storage
   T? getValue<T>(String key) {
     if (T == String) {
-      return _sp!.getString(key) as T;
+      final String? value = _sp!.getString(key);
+      if (value == null) {
+        return null;
+      }
+
+      return value as T;
     }
+
     if (T == int) {
-      return _sp!.getInt(key) as T;
+      final int? value = _sp!.getInt(key);
+      if (value == null) {
+        return null;
+      }
+      return value as T;
     }
+
     if (T == double) {
-      return _sp!.getDouble(key) as T;
+      final double? value = _sp!.getDouble(key);
+      if (value == null) {
+        return null;
+      }
+      return value as T;
     }
+
     if (T == bool) {
-      return _sp!.getBool(key) as T;
+      final bool? value = _sp!.getBool(key);
+      if (value == null) {
+        return null;
+      }
+      return value as T;
     }
+
     if (T == List<String>) {
-      return _sp!.getStringList(key) as T;
+      final List<String>? value = _sp!.getStringList(key);
+      if (value == null) {
+        return null;
+      }
+      return value as T;
     }
+
     if (T == Map<String, dynamic>) {
       final String? jsonString = _sp!.getString(key);
       if (jsonString == null) {
