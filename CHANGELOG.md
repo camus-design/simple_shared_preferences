@@ -1,3 +1,7 @@
+## 1.2.2
+
+* Fixed: GetValue Null Reference Exception
+
 ## 1.2.1
 
 * Doc: Update README.md
