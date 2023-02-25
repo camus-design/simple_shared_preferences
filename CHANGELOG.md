@@ -1,3 +1,7 @@
+## 1.2.3
+
+* Chore: remove redundancy files
+
 ## 1.2.2
 
 * Fixed: GetValue Null Reference Exception
