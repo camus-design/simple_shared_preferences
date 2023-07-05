@@ -23,12 +23,12 @@ import 'package:simple_shared_preferences/simple_shared_preferences.dart';
 
 final simplePreference = await SimpleSharedPreferences.getInstance();
 
-await simplePreference.set('name': 'simple shared preferences');
-await simplePreference.set('age': 1);
-await simplePreference.set('isDeveloper': true);
-await simplePreference.set('height': 1.75);
-await simplePreference.set('list': [1, 2, 3]);
-await simplePreference.set('map': {'name': 'simple shared preferences'});
+await simplePreference.set('name', 'simple shared preferences');
+await simplePreference.set('age', 1);
+await simplePreference.set('isDeveloper', true);
+await simplePreference.set('height', 1.75);
+await simplePreference.set('list', [1, 2, 3]);
+await simplePreference.set('map', {'name': 'simple shared preferences'});
 
 final String name = simplePreference.get('name');
 final int age = simplePreference.get('age');
